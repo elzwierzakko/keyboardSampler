@@ -57,9 +57,7 @@ document.addEventListener('keydown', function(e) {
 } if (PresetCounter === 5) {
   PresetCounter = 1;
   document.getElementById("color").innerText = "PRESET 1";
-
   document.getElementById("color").style.backgroundColor = "#6b5b95";
-
 }
 });
 

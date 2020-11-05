@@ -12,58 +12,58 @@ body {
 }
 
 .container {
-    opacity: 0.8;
-    max-height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  opacity: 0.8;
 }
 
 h1 {
+  display: block;
+  margin: 20px;
   text-align: center;
   font-size: 23px;
-  margin: 20px;
   color:rgba(0, 0, 0, 0.5);
   text-shadow: 1px 1px rgb(221,212,199);
-  display: block;
   border-top: 2px solid rgba(0, 0, 0, 0.5);
   border-bottom: 2px solid rgba(0, 0, 0, 0.5);
 }
 
 .crow {
-  margin: 16px;
-  min-height: 600px;
   width: 500px;
-  background-image: url("res/background.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-color: rgb(255,255,255);
+  min-height: 600px;
   display: flex;
   flex-direction: column;
   float: left;
   justify-content: space-between;
+  background-image: url("res/background.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: rgb(255,255,255);
+  margin: 16px;
   border: 2px solid rgba(0, 0, 0, 0.5);
   box-shadow: 4px 4px rgba(0, 0, 0, 0.5);
 }
 
 .sample-listing {
-  background-color: rgba(28,24,20, 0.5);
-  flex-wrap: wrap;
-  align-items: center;
-  box-sizing: border-box;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: rgba(28,24,20, 0.5);
   max-height: 300px;
   margin: 16px;
 }
 
 li {
-  align-content: flex-end;
-  margin: 15px;
   width: 100px;
   min-height: 40px;
+  align-content: flex-end;
+  margin: 15px;
   font-size: 15px;
   line-height: 30px;
   padding: 10px;
@@ -72,20 +72,19 @@ li {
   background-color: rgba(28,24,20, 0.8);
   border-radius: 16px;
   list-style: none;
-
   color: rgb(221,212,199);
   border: 2px solid rgb(221,212,199);
   box-shadow: 2px rgb(221,212,199);
 }
 
 .selected-preset-color {
-  margin: 16px;
   max-height: 600px;
   width: 500px;
-  background-color: rgb(255,255,255);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 16px;
+  background-color: rgb(255,255,255);
   border: 2px solid rgba(0, 0, 0, 0.5);
   box-shadow: 4px 4px rgba(0, 0, 0, 0.5);
   overflow: overlay;
@@ -109,4 +108,24 @@ li {
   text-align: center;
   padding: 20%;
   font-weight: bold;
+}
+
+
+@media only screen and (max-width: 760px) {
+  .container {
+    flex-direction: column;
+    padding: 0;
+    max-height: 200vh;
+
+  }
+  .crow, .selected-preset-color {
+    width: 100vw;
+    min-height: 100vh;
+    margin: 0;
+    background-position: center;
+  }
+  .color {
+    margin: 3px;
+    border-radius: 0;
+  }
 }
